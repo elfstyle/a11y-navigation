@@ -7,6 +7,7 @@ import { useColorScheme } from "react-native";
 
 import Colors from "../constants/Colors";
 import TabOneScreen from "../screens/TabOneScreen";
+import TabOneScreen2 from "../screens/TabOneScreen2";
 import TabTwoScreen from "../screens/TabTwoScreen";
 
 const BottomTab = createBottomTabNavigator();
@@ -26,6 +27,7 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
           ),
+          headerShown: false,
         }}
       />
       <BottomTab.Screen
@@ -35,6 +37,7 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
           ),
+          headerShown: false,
         }}
       />
     </BottomTab.Navigator>
@@ -57,6 +60,11 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
+        options={{ headerTitle: "Tab One Title" }}
+      />
+      <TabOneStack.Screen
+        name="TabOneScreen2"
+        component={TabOneScreen2}
         options={{ headerTitle: "Tab One Title" }}
       />
     </TabOneStack.Navigator>

@@ -3,19 +3,16 @@ import { StyleSheet } from "react-native";
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 
-export default function TabOneScreen({ navigation: { navigate } }) {
+export default function TabOneScreen2() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One Screen 1</Text>
+      <Text style={styles.title}>Tab One Screen 2</Text>
       <View
         style={styles.separator}
         lightColor="#eee"
         darkColor="rgba(255,255,255,0.1)"
       />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-      <Text onPress={() => navigate("TabOneScreen2")}>
-        Go to Tab One Screen 2
-      </Text>
     </View>
   );
 }
